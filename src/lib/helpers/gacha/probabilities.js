@@ -4,8 +4,8 @@ import { localrate } from '../dataAPI/api-localstore';
 export const rates = ({
 	currentPity = 0,
 	maxPity = 90,
-	baseRate = 0.6,
-	rateIncreasedAt = 74
+	baseRate = 100,
+	rateIncreasedAt = 1
 } = {}) => {
 	if (baseRate <= 0 && currentPity < maxPity) return 0;
 	if (currentPity < rateIncreasedAt) return baseRate;
